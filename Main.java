@@ -10,6 +10,8 @@ public class Main {
         // Register members
         library.registerMember(new Member("Alice"));
         library.registerMember(new Member("Bob"));
+        library.registerMember(new Member("Chandrakanth"));
+        library.registerMember(new Member("Talakokkula"));
 
         // Borrow and return
         library.listBooks();
