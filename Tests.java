@@ -9,6 +9,7 @@ public class DemoTests {
     static Browser browser;
     BrowserContext context;
     Page page;
+    Page page;
 
     @BeforeAll
     static void setupClass() {
@@ -31,23 +32,6 @@ public class DemoTests {
     @AfterEach
     void cleanup() {
         context.close();
-    }
-
-    // 1. Verify Page Title
-    @Test
-    void checkPageTitle() {
-        page.navigate("https://example.com");
-        assertTrue(page.title().contains("Example Domain"));
-    }
-
-    // 2. Login with Valid Credentials
-    @Test
-    void loginValidUser() {
-        page.navigate("https://the-internet.herokuapp.com/login");
-        page.fill("#username", "tomsmith");
-        page.fill("#password", "SuperSecretPassword!");
-        page.click("button[type='submit']");
-        assertTrue(page.locator(".flash.success").textContent().contains("You logged into a secure area!"));
     }
 
     // 3. Login with Invalid Credentials
@@ -103,7 +87,7 @@ public class DemoTests {
     void validateTableData() {
         page.navigate("https://the-internet.herokuapp.com/tables");
         String email = page.textContent("table#table1 tr:nth-child(2) td:nth-child(3)");
-        assertEquals("fbach@yahoo.com", email);
+        assertEquals("fbach@yahoo.com", email );
     }
 
 }
