@@ -9,6 +9,7 @@ public class DemoTests {
     static Browser browser;
     BrowserContext context;
     Page page;
+    Page page;
 
     @BeforeAll
     static void setupClass() {
