@@ -87,7 +87,7 @@ public class DemoTests {
     void validateTableData() {
         page.navigate("https://the-internet.herokuapp.com/tables");
         String email = page.textContent("table#table1 tr:nth-child(2) td:nth-child(3)");
-        assertEquals("fbach@yahoo.com", email);
+        assertEquals("fbach@yahoo.com", email );
     }
 
 }
