@@ -1,5 +1,6 @@
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Scanner;
 
 // Book.java
 class Book {
@@ -20,6 +21,7 @@ class Book {
         this.title = title;
         this.author = author;
 
+        Scanner sc=new Scanner(System.in);
     }
 
     public String getTitle() { return title; }
