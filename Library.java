@@ -22,6 +22,7 @@ class Library {
             }
         }
         System.out.println("Book not available!");
+        System.out.println("Book available upon request!");
     }
 
     public void returnBook(String title) {
