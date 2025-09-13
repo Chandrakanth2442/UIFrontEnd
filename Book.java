@@ -1,15 +1,19 @@
+import java.util.Date;
+
 // Book.java
 class Book {
     private String title;
     private String author;
     private boolean isBorrowed;
     private boolean isReturned;
+    private Date date;
 
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
         this.isBorrowed = false;
         this.isReturned=false;
+        date=new Date();
     }
 
     public String getTitle() { return title; }
