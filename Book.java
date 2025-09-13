@@ -3,11 +3,13 @@ class Book {
     private String title;
     private String author;
     private boolean isBorrowed;
+    private boolean isReturned;
 
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
         this.isBorrowed = false;
+        this.isReturned=false;
     }
 
     public String getTitle() { return title; }
