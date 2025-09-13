@@ -33,6 +33,7 @@ class Library {
             }
         }
         System.out.println("Invalid return attempt!");
+        System.out.println("Changing request state");
     }
 
     public void listBooks() {
