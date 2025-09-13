@@ -23,6 +23,7 @@ class Library {
         }
         System.out.println("Book not available!");
         System.out.println("Book available upon request!");
+        System.out.println("Books are available!");
     }
 
     public void returnBook(String title) {
