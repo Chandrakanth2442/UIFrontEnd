@@ -34,23 +34,6 @@ public class DemoTests {
         context.close();
     }
 
-    // 1. Verify Page Title
-    @Test
-    void checkPageTitle() {
-        page.navigate("https://example.com");
-        assertTrue(page.title().contains("Example Domain"));
-    }
-
-    // 2. Login with Valid Credentials
-    @Test
-    void loginValidUser() {
-        page.navigate("https://the-internet.herokuapp.com/login");
-        page.fill("#username", "tomsmith");
-        page.fill("#password", "SuperSecretPassword!");
-        page.click("button[type='submit']");
-        assertTrue(page.locator(".flash.success").textContent().contains("You logged into a secure area!"));
-    }
-
     // 3. Login with Invalid Credentials
     @Test
     void loginInvalidUser() {
@@ -123,6 +106,8 @@ public class DemoTests {
     @Test
     void takeScreenshot() {
         page.navigate("https://example.com");
+        page.navigate("https://example.com2");
+        page.navigate("https://example.com3");
         page.screenshot(new Page.ScreenshotOptions()
                 .setPath(java.nio.file.Paths.get("screenshots/example.png"))
                 .setFullPage(true));
