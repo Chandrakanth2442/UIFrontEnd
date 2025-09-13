@@ -8,12 +8,12 @@ class Library {
     public void addBook(Book book) {
         books.add(book);
     }
-
     public void registerMember(Member member) {
         members.add(member);
     }
 
     public void borrowBook(String title, String memberName) {
+        System.out.println("Print logic");
         for (Book b : books) {
             if (b.getTitle().equalsIgnoreCase(title) && !b.isBorrowed()) {
                 b.borrowBook();
@@ -33,6 +33,7 @@ class Library {
             }
         }
         System.out.println("Invalid return attempt!");
+        System.out.println("Changing request state");
     }
 
     public void listBooks() {
