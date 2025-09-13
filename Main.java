@@ -2,6 +2,7 @@
 public class Main {
     public static void main(String[] args) {
         Library library = new Library();
+        System.out.println("New line");
         // Add books
         library.addBook(new Book("The Hobbit", "J.R.R. Tolkien"));
         library.addBook(new Book("1984", "George Orwell"));
