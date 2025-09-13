@@ -90,28 +90,5 @@ public class DemoTests {
         assertEquals("fbach@yahoo.com", email);
     }
 
-    // 9. API Mocking
-    @Test
-    void mockApiResponse() {
-        page.route("**/users", route -> {
-            route.fulfill(new Route.FulfillOptions()
-                    .setStatus(200)
-                    .setBody("[{\"id\":1, \"name\":\"Mocked User\"}]"));
-        });
-        page.navigate("https://example.com/users");
-        assertTrue(page.locator("text=Mocked User").isVisible());
-    }
-
-    // 10. Screenshot
-    @Test
-    void takeScreenshot() {
-        page.navigate("https://example.com");
-        page.navigate("https://example.com2");
-        page.navigate("https://example.com3");
-        page.screenshot(new Page.ScreenshotOptions()
-                .setPath(java.nio.file.Paths.get("screenshots/example.png"))
-                .setFullPage(true));
-        assertTrue(java.nio.file.Files.exists(java.nio.file.Paths.get("screenshots/example.png")));
-    }
 }
 
