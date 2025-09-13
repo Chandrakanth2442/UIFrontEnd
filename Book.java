@@ -22,6 +22,8 @@ class Book {
         this.author = author;
 
         Scanner sc=new Scanner(System.in);
+        this.title = title;
+        this.author = author;
     }
 
     public String getTitle() { return title; }
